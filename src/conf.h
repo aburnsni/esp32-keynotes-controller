@@ -2,12 +2,12 @@
 
 #include <BLEHIDDevice.h>
 
-#define DEVICE_NAME "Henry-KeyLight"
+#define DEVICE_NAME "Key Clicker"
 
 #define LASER_LIGHT_PIN 32
 #define NEXT_SLIDE_BUTTON_PIN 25
-#define PREVIOUS_SLIDE_BUTTON_PIN 4
-#define LASER_BUTTON_PIN 5
+#define PREVIOUS_SLIDE_BUTTON_PIN 5
+#define LASER_BUTTON_PIN 4
 
 // Sleep after 5 minutes
 #define MAX_ACTIVE_TIME 5 * 60 * 1000
@@ -20,7 +20,7 @@
  * DOWN  - 0x51
  * UP    - 0x52
  */
-#define KEY_CODE_LEFT_ARROW 0x50
+#define KEY_CODE_LEFT_ARROW 0x04
 #define KEY_CODE_RIGHT_ARROW 0x4f
 
 #define KEY_CODE_PREVIOUS_SLIDE KEY_CODE_LEFT_ARROW
@@ -38,9 +38,9 @@ const uint8_t KEYBOARD_REPORT_MAP[] PROGMEM = {
     USAGE_PAGE(1),
     0x07, //   Kbrd/Keypad
     USAGE_MINIMUM(1),
-    0xE0,
+    0x00,
     USAGE_MAXIMUM(1),
-    0xE7,
+    0xFF,
     LOGICAL_MINIMUM(1),
     0x00,
     LOGICAL_MAXIMUM(1),
